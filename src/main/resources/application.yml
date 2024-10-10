@@ -1,0 +1,33 @@
+gg.jte.development-mode: true
+spring:
+  application:
+    name: mapperEngine
+
+logging:
+  level:
+    root: INFO
+service:
+  name: MAPPER_ENGINE
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+  packagesToScan: com.test.mapperEngine
+
+server:
+  port: 9000
+  servlet:
+    contest-path: /mapper/api
+  error:
+    include-message: always
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
